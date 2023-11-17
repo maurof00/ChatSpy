@@ -1,0 +1,7 @@
+name: CommandSpy
+version: '${project.version}'
+main: it.mauro.commandspy.CommandSpy
+api-version: '1.19'
+commands:
+  spy:
+    description: SpyPlugin commands.
