@@ -27,7 +27,9 @@ public class SpyEvent implements Listener {
         if(!player.hasPermission("unrealspy.bypass") && spyAPI.isSpyAlerts()) {
             for(Player onlineplayer : Bukkit.getOnlinePlayers()) {
                 if(onlineplayer != player) {
-                    onlineplayer.sendMessage(FormatAPI.translate("&8&l[&2Spy&8&l] &8» &7{player} &f%command% ").replaceAll("%command%", e.getMessage()).replace("{player}", player.getName()));
+                    onlineplayer.sendMessage(FormatAPI.translate("&e[CHAT-SPY] &8» &7{player}: &e%command%")
+                                             .replaceAll("%command%", e.getMessage())
+                                             .replace("{player}", player.getName()));
                 }
             }
         }
